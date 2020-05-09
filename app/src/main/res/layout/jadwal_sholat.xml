@@ -7,95 +7,403 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:text="Jadwal Sholat"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:background="#A8B5B3"
-        android:textStyle="bold"
-        android:textColor="#ffff"/>
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        android:background="#fff">
 
-    <TextView
-        android:layout_width="411dp"
-        android:layout_height="241dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:text="Gambar dan JadwalSholat"
-        android:textColor="#B1AEAE"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="49dp" />
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/kembali"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"/>
 
-    <TextView
-        android:id="@+id/textView"
+        <TextView
+            android:layout_width="249dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:text="Jadwal Sholat"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/Lokasi"
+            android:layout_marginHorizontal="10dp"/>
+
+        <ImageView
+            android:id="@+id/kompas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/kompas"
+            android:layout_marginHorizontal="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#A8B5B3"
-        android:gravity="center"
-        android:text="pilihan tanggal"
-        android:textColor="#ffff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="290dp" />
+        android:layout_height="251dp"
+        android:orientation="vertical"
+        android:background="@drawable/masjid"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/textView2"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/namaSholat"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="Isya"
+                android:textColor="#fff"
+                android:textSize="29sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/waktuSholat"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="18.49 WIB"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/countdownSholat"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="00:10:49"
+                android:textColor="#fff"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Jl. Banyu No. 134 Kec. Depok, Sleman"
+                android:textColor="#fff"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="Subuh                                                                  jam             icon"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="340dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView3"
+        <ImageView
+            android:id="@+id/tanggalSebelum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/kiri"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tanggal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tanggalSetelah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/kanan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tanggal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.518" />
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:background="#fffff"
+            android:gravity="center"
+            android:text="Sabtu, 9 Mei 2020"
+            android:textColor="#0D7D6C"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="@+id/tanggal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:background="#A8B5B3"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="Duhur                                                                  jam             icon"
-        android:textColor="#ffff"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="402dp" />
+        android:layout_height="53dp">
 
-    <TextView
-        android:id="@+id/textView4"
+        <TextView
+            android:id="@+id/subuh"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="Subuh"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jamSubuh"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="04.25"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifSubuh"
+            app:layout_constraintStart_toEndOf="@+id/subuh"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notifSubuh"
+            android:layout_width="20dp"
+            android:layout_height="18.67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Notif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jamSubuh"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="Ashar                                                                  jam             icon"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="464dp" />
+        android:layout_height="53dp">
 
-    <TextView
-        android:id="@+id/textView5"
+        <TextView
+            android:id="@+id/duhur"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="Duhur"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jamDuhur"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="11.49"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifDuhur"
+            app:layout_constraintStart_toEndOf="@+id/duhur"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notifDuhur"
+            android:layout_width="20dp"
+            android:layout_height="18.67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Mute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jamDuhur"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:background="#A8B5B3"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="Maghrib                                                             jam             icon"
-        android:textColor="#ffff"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="526dp" />
+        android:layout_height="53dp">
 
-    <TextView
-        android:id="@+id/textView6"
+        <TextView
+            android:id="@+id/asar"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="Ashar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jamAsar"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="15.40"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifAsar"
+            app:layout_constraintStart_toEndOf="@+id/asar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notifAsar"
+            android:layout_width="20dp"
+            android:layout_height="18.67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Notif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jamAsar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="Isya                                                                  jam             icon"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="588dp" />
+        android:layout_height="53dp">
 
+        <TextView
+            android:id="@+id/maghrib"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="Maghrib"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jamMaghrib"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="18.00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifMaghrib"
+            app:layout_constraintStart_toEndOf="@+id/maghrib"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notifMaghrib"
+            android:layout_width="20dp"
+            android:layout_height="18.67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Notif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jamMaghrib"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <TextView
+            android:id="@+id/isya"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="Isya"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jamIsya"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="19.00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifIsya"
+            app:layout_constraintStart_toEndOf="@+id/isya"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notifIsya"
+            android:layout_width="20dp"
+            android:layout_height="18.67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Mute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jamIsya"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAD5D5"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
