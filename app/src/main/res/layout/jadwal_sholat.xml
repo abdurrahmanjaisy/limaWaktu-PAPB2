@@ -13,10 +13,12 @@
         android:orientation="horizontal"
         android:background="#fff">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btnBack"
             android:layout_width="23dp"
             android:layout_height="23dp"
             android:src="@drawable/kembali"
+            android:background="@android:color/transparent"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="8dp"/>
 
@@ -36,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/Lokasi"
+            android:src="@drawable/lokasi"
             android:layout_marginHorizontal="10dp"/>
 
         <ImageView
@@ -136,7 +138,7 @@
             android:id="@+id/tanggal"
             android:layout_width="280dp"
             android:layout_height="50dp"
-            android:background="#fffff"
+            android:background="#ffffff"
             android:gravity="center"
             android:text="Sabtu, 9 Mei 2020"
             android:textColor="#0D7D6C"
@@ -191,7 +193,7 @@
             android:layout_width="20dp"
             android:layout_height="18.67dp"
             android:layout_gravity="center"
-            android:src="@drawable/Notif"
+            android:src="@drawable/notif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/jamSubuh"
@@ -241,7 +243,7 @@
             android:layout_width="20dp"
             android:layout_height="18.67dp"
             android:layout_gravity="center"
-            android:src="@drawable/Mute"
+            android:src="@drawable/mute"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/jamDuhur"
@@ -291,7 +293,7 @@
             android:layout_width="20dp"
             android:layout_height="18.67dp"
             android:layout_gravity="center"
-            android:src="@drawable/Notif"
+            android:src="@drawable/notif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/jamAsar"
@@ -341,7 +343,7 @@
             android:layout_width="20dp"
             android:layout_height="18.67dp"
             android:layout_gravity="center"
-            android:src="@drawable/Notif"
+            android:src="@drawable/notif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/jamMaghrib"
@@ -391,7 +393,7 @@
             android:layout_width="20dp"
             android:layout_height="18.67dp"
             android:layout_gravity="center"
-            android:src="@drawable/Mute"
+            android:src="@drawable/mute"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/jamIsya"
